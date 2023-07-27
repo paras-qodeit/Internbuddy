@@ -8,6 +8,7 @@ import {
   FaRegClock,
   FaGlobe,
   FaWrench,
+  FaCalendarAlt,
   FaCheck,
 } from "react-icons/fa";
 import YoutubeEmbed from "../components/YoutubeEmbed";
@@ -123,7 +124,7 @@ const Home = () => {
       <div className="navbar-2">
         <div className="nav-content">
           <div className="content-nav">
-            <a href="/">
+            <a href="#content-overview">
               <span>Overview</span>
             </a>
           </div>
@@ -133,17 +134,17 @@ const Home = () => {
             </a>
           </div>
           <div className="content-nav">
-            <a href="/">
+            <a href="#accreditated">
               <span>Accreditation</span>
             </a>
           </div>
           <div className="content-nav">
-            <a href="/">
+            <a href="#span-join-today">
               <span>Start dates</span>
             </a>
           </div>
           <div className="content-nav">
-            <a href="/">
+            <a href="#requirements">
               <span>Requirements</span>
             </a>
           </div>
@@ -165,7 +166,7 @@ const Home = () => {
         </div>
       </div>
       <div>
-        <Container className="content-overview">
+        <Container className="content-overview" id="content-overview">
           <h3>
             Learn to use digital marketing strategies to grow your business
           </h3>
@@ -219,7 +220,7 @@ const Home = () => {
             {shown2 && <TimelineComp />}
           </div>
         </Container>
-        <Container className="accreditated">
+        <Container className="accreditated" id="accreditated">
           <h1>Who is this accredited by?</h1>
           <img
             src="https://ugc.futurelearn.com/uploads/images/67/5c/675c873b-0981-4c4a-9184-250027fd1da2.svg"
@@ -231,6 +232,29 @@ const Home = () => {
             established in 1996 and is the leading independent CPD accreditation
             institution operating across industry sectors to complement the CPD
             policies of professional and academic bodies.
+          </p>
+          <h1>When would you like to start?</h1>
+          <p>
+            Start straight away and join a global classroom of learners. If the
+            course hasn’t started yet you’ll see the future date listed below.
+          </p>
+          <div className="span-join-today" id="span-join-today">
+            <div className="calender-now">
+              <FaCalendarAlt size={36} className="mx-3" />
+              <h5>Available now</h5>
+            </div>
+            <div>
+              <button>Join Today</button>
+            </div>
+          </div>
+          <h1 id="requirements">Who is the course for?</h1>
+          <p>
+            This course is designed for anyone interested in honing their
+            digital marketing skills.
+          </p>
+          <h1 id="more-courses">More courses you might like</h1>
+          <p>
+            Learners who joined this course have also enjoyed these courses.
           </p>
         </Container>
       </div>
