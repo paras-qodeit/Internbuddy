@@ -3,6 +3,7 @@ import Logo from "../assets/Logo.png";
 import "./home.css";
 import { Container, Button, Row, Col } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
+import Footer from "../components/Footer";
 import {
   FaHourglassHalf,
   FaRegClock,
@@ -258,6 +259,7 @@ const Home = () => {
           </p>
         </Container>
       </div>
+      <Footer />
     </>
   );
 };

@@ -23,6 +23,13 @@ const Navigation = () => {
       console.error(err);
     }
   };
+  const DashboardHandler = async () => {
+    try {
+      navigate("/dashboard");
+    } catch (err) {
+      console.error(err);
+    }
+  };
   return (
     <Navbar bg="light" expand="lg">
       <Container>
@@ -51,6 +58,9 @@ const Navigation = () => {
             )}
             {userInfo && (
               <NavDropdown title={<>{userInfo.name}</>} id="basic-nav-dropdown">
+                <NavDropdown.Item>
+                  <Button onClick={DashboardHandler}>Dashboard</Button>
+                </NavDropdown.Item>
                 <NavDropdown.Item>
                   <Button variant="danger" onClick={logoutHandler}>
                     Logout

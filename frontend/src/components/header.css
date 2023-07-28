@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+}
+.tier-1 {
+  width: 40%;
+}
+.tier-2 {
+  margin: 15px;
+  cursor: pointer;
+}
+.tier-2 > b {
+  margin-left: 5px;
+}
