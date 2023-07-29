@@ -1,6 +1,7 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 const baseQuery = fetchBaseQuery({
+  // baseUrl: "https://localhost:3000",
   baseUrl: "https://backend-qodeit.onrender.com",
 });
 
@@ -34,3 +35,4 @@ export const apiSlice = createApi({
 
 export const { useLoginMutation, useSignupMutation, useLogoutMutation } =
   apiSlice;
+export default apiSlice;

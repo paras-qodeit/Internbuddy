@@ -6,7 +6,6 @@ import { useDispatch } from "react-redux";
 import { useSignupMutation } from "../slices/apiSlice";
 import { setCredentials } from "../slices/authSlice";
 import { toast } from "react-toastify";
-import Loader from "../components/Loader";
 
 const Signup = () => {
   const [name, setName] = useState("");
@@ -84,7 +83,7 @@ const Signup = () => {
         >
           Signup
         </Button>
-        {isLoading && <Loader />}
+        {/* {isLoading && <Loader />} */}
       </Form>
 
       <Row className="py-3">
