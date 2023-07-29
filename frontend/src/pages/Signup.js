@@ -84,7 +84,7 @@ const Signup = () => {
         >
           Signup
         </Button>
-        {/* {isLoading && <Loader />} */}
+        {isLoading && <Loader />}
       </Form>
 
       <Row className="py-3">
