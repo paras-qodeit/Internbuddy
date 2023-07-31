@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: space-around;
   margin: 30px;
+  width: 100%;
 }
 .cover-1 > img {
   width: 180px;
@@ -28,9 +29,8 @@
 }
 
 .cover-image {
-  width: 500px;
-  border-radius: 20%;
-  box-shadow: -1em 0 0.2em rgb(255, 238, 238);
+  width: 600px;
+  box-shadow: -4em 0 0.2em rgb(252, 244, 244);
   height: 90vh;
 }
 
@@ -101,6 +101,7 @@
   background-color: #de00a5;
   color: white;
   padding: 8px;
+  margin: 15px 0;
   border-radius: 5px;
 }
 .syllabii-btn:hover {
@@ -151,29 +152,71 @@
 @media screen and (max-width: 720px) {
   .row-1 {
     display: flex;
-    height: 100vh;
+    height: 70vh;
     flex-direction: column;
+  }
+  .cover-1 {
+    width: fit-content;
   }
   .cover-1 > img {
     width: 90px;
     height: 70px;
   }
   .cover-1 > h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     line-height: 1;
+    margin-top: 10px;
   }
 
   .cover-1 > p {
-    font-size: 1rem;
+    font-size: 1.5rem;
     width: auto;
     width: fit-content;
+    text-align: justify;
     line-height: 1.25;
+  }
+  .cover-1 > button {
+    padding: 15px 20px;
+    color: black;
+    background-color: #de00a5;
+    border: none;
   }
   .cover-image {
     width: 350px;
     height: 300px;
+    box-shadow: 0 -1.5rem 2em rgb(212, 212, 212);
   }
   .desc {
     flex-direction: column;
+  }
+  .nav-content {
+    justify-content: start;
+    width: fit-content;
+    font-size: 20px;
+    padding: 25px;
+    margin: 0 100px;
+  }
+  .content-overview {
+    text-align: justify;
+    margin-left: 15px;
+  }
+  .navbar-2 {
+    position: relative;
+  }
+  .syllabus-1 {
+    text-align: center;
+  }
+  .syllabii-btn {
+    width: 90%;
+    padding: 15px;
+    border-radius: 10px;
+  }
+  .accreditated > h1 {
+    text-align: justify;
+    margin-left: 15px;
+  }
+  .accreditated > p {
+    margin-left: 15px;
+    text-align: justify;
   }
 }

@@ -1,3 +1,8 @@
 .dropdown {
   width: 100%;
 }
+@media screen and (max-width: 720px) {
+  .yt-comp {
+    height: 60vh;
+  }
+}

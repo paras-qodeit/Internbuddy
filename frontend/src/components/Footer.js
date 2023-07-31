@@ -13,16 +13,30 @@ import {
 const Footer = () => {
   return (
     <div className="Footer">
-      <div className="icons">
-        <FaFacebookF />
-        <FaLinkedin />
-        <FaInstagram />
-        <FaTwitter />
-        <FaYoutube />
+      <div className="left-section">
+        <LinkContainer to="/">
+          <img src={Logo} alt="Qodeit-logo" />
+        </LinkContainer>
       </div>
-      <LinkContainer to="/">
-        <img src={Logo} alt="Qodeit-logo" />
-      </LinkContainer>
+      <div className="right-section">
+        <div className="icons">
+          <LinkContainer to="/">
+            <FaFacebookF />
+          </LinkContainer>
+          <LinkContainer to="/">
+            <FaLinkedin />
+          </LinkContainer>
+          <LinkContainer to="/">
+            <FaInstagram />
+          </LinkContainer>
+          <LinkContainer to="/">
+            <FaTwitter />
+          </LinkContainer>
+          <LinkContainer to="/">
+            <FaYoutube />
+          </LinkContainer>
+        </div>
+      </div>
     </div>
   );
 };

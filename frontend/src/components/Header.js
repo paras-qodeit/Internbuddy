@@ -14,14 +14,14 @@ const Header = () => {
     <div className="header">
       <div className="tier-1">
         <ProgressBar
-          now={30}
-          label={`Progress : 30% completed`}
+          now={70}
+          label={`Progress : 70% completed`}
           animated
           variant="success"
           style={{ height: 25 }}
         />
       </div>
-      <div>
+      <div className="links">
         <LinkContainer to="/" className="tier-2">
           <span>
             <FaRegFlag size={30} />

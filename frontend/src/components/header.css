@@ -14,3 +14,17 @@
 .tier-2 > b {
   margin-left: 5px;
 }
+
+@media screen and (max-width: 720px) {
+  .header {
+    flex-direction: column;
+  }
+  .tier-1 {
+    width: 100%;
+  }
+  .links {
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+  }
+}

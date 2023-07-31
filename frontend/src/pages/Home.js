@@ -56,7 +56,7 @@ const Home = () => {
           </Col>
           <Col>
             <img
-              src="https://images.unsplash.com/reserve/LJIZlzHgQ7WPSh5KVTCB_Typewriter.jpg?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=396&q=80"
+              src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
               alt=""
               className="cover-image"
             />
@@ -205,7 +205,7 @@ const Home = () => {
           <YoutubeEmbed embedId="nE9Rn9tAD_I" />
         </Container>
         <Container id="syllabus">
-          <h2>Syllabus</h2>
+          <h1>Syllabus</h1>
           <div className="syllabus-1">
             <h3>How to use digital marketing</h3>
             <button className="syllabii-btn" onClick={handleClick}>

@@ -33,13 +33,13 @@ const Navigation = () => {
   return (
     <Navbar bg="light" expand="lg">
       <Container>
-        <LinkContainer to="/" className="fw-bold fst-italic">
+        <LinkContainer to="/">
           <Navbar.Brand>Internbuddy</Navbar.Brand>
         </LinkContainer>
-        <LinkContainer to="/signup" className="fs-5">
+        <LinkContainer to="/signup">
           <Navbar.Brand>Subjects</Navbar.Brand>
         </LinkContainer>
-        <LinkContainer to="/login" className="fs-5">
+        <LinkContainer to="/login">
           <Navbar.Brand>Courses</Navbar.Brand>
         </LinkContainer>
 
