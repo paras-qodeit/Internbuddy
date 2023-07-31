@@ -155,9 +155,9 @@
     height: 100vh;
     flex-direction: column;
   }
-  /* .cover-1 {
-    width: fit-content;
-  } */
+  .cover-1 {
+    margin: 10px;
+  }
   .cover-1 > img {
     width: 150px;
     height: 70px;
@@ -182,12 +182,16 @@
     border: none;
   }
   .cover-image {
-    width: 360px;
-    height: 300px;
+    width: 440px;
+    height: 290px;
+    /* margin: 1rem 2rem; */
     box-shadow: 0 -1.5rem 2em rgb(212, 212, 212);
   }
   .desc {
     flex-direction: column;
+  }
+  .content-box1 {
+    margin: 0;
   }
   .nav-content {
     justify-content: start;
@@ -198,7 +202,7 @@
   }
   .content-overview {
     text-align: justify;
-    margin-left: 15px;
+    /* margin-left: 15px; */
   }
   .navbar-2 {
     position: relative;
@@ -213,10 +217,10 @@
   }
   .accreditated > h1 {
     text-align: justify;
-    margin-left: 15px;
+    /* margin-left: 15px; */
   }
   .accreditated > p {
-    margin-left: 15px;
+    /* margin-left: 15px; */
     text-align: justify;
   }
 }
