@@ -5,6 +5,7 @@ import { useLogoutMutation } from "../slices/apiSlice";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { logout } from "../slices/authSlice";
+import "./Navigation.css";
 
 const Navigation = () => {
   const { userInfo } = useSelector((state) => state.auth);
@@ -34,13 +35,12 @@ const Navigation = () => {
     <Navbar bg="light" expand="lg">
       <Container>
         <LinkContainer to="/">
-          <Navbar.Brand>Internbuddy</Navbar.Brand>
+          <Navbar.Brand className="fw-bold fst-italic brand">
+            Internbuddy
+          </Navbar.Brand>
         </LinkContainer>
-        <LinkContainer to="/signup">
-          <Navbar.Brand>Subjects</Navbar.Brand>
-        </LinkContainer>
-        <LinkContainer to="/login">
-          <Navbar.Brand>Courses</Navbar.Brand>
+        <LinkContainer to="/certificate">
+          <Navbar.Brand className="brand">Certificate</Navbar.Brand>
         </LinkContainer>
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -49,10 +49,10 @@ const Navigation = () => {
             {!userInfo && (
               <>
                 <LinkContainer to="/signup" className="fs-5">
-                  <Nav.Link>Signup</Nav.Link>
+                  <Nav.Link className="brand">Signup</Nav.Link>
                 </LinkContainer>
                 <LinkContainer to="/login" className="fs-5">
-                  <Nav.Link>Login</Nav.Link>
+                  <Nav.Link className="brand">Login</Nav.Link>
                 </LinkContainer>
               </>
             )}

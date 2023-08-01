@@ -16,6 +16,7 @@ import Home from "./pages/Home";
 import { Provider } from "react-redux";
 import Signup from "./pages/Signup";
 import Dashboard from "./pages/Dashboard";
+import Certificate from "./pages/Certificate";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -24,6 +25,7 @@ const router = createBrowserRouter(
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
       <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/certificate" element={<Certificate />} />
     </Route>
   )
 );

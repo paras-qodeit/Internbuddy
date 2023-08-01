@@ -9,31 +9,46 @@ import {
   FaRegClock,
   FaGlobe,
   FaWrench,
-  FaCalendarAlt,
+  FaEnvelopeOpenText,
   FaCheck,
 } from "react-icons/fa";
-import YoutubeEmbed from "../components/YoutubeEmbed";
 import TimelineComp from "../components/TimelineComp";
 
 const Home = () => {
   const [shown, setIsShown] = useState(false);
-  const [btnContent, setBtnContent] = useState("Show Weekly Breakdown");
+  const [btnContent, setBtnContent] = useState("Show Breakdown");
   const [shown2, setIsShown2] = useState(false);
-  const [btnContent2, setBtnContent2] = useState("Show Weekly Breakdown");
+  const [btnContent2, setBtnContent2] = useState("Show Breakdown");
+
+  const CorporateBusiness = [
+    "Introduction to Business Development",
+    "Strategic Partnerships ",
+    "Sales and Negotiation Techniques ",
+    "Market Research and Analysis",
+    "Start your business development journey with us at just ",
+  ];
+  const MetaBusiness = [
+    "Introduction to Facebook Marketing",
+    "Handling Facebook page ",
+    "Poster making ",
+    "Meta Business Suite and Insights ",
+    "Scheduling social media content",
+    "Start your meta-marketing journey with us at just",
+  ];
 
   const handleClick = (event) => {
     // 👇️ toggle shown state
     setIsShown((current) => !current);
-    if (btnContent === "Show Weekly Breakdown") {
-      setBtnContent("Hide Weekly Breakdown");
-    } else setBtnContent("Show Weekly Breakdown");
+    if (btnContent === "Show Breakdown") {
+      setBtnContent("Hide Breakdown");
+    } else setBtnContent("Show Breakdown");
   };
   const handleClick2 = (event) => {
     // 👇️ toggle shown state
     setIsShown2((current) => !current);
-    if (btnContent2 === "Show Weekly Breakdown") {
-      setBtnContent2("Hide Weekly Breakdown");
-    } else setBtnContent2("Show Weekly Breakdown");
+    if (btnContent2 === "Show Breakdown") {
+      setBtnContent2("Hide Breakdown");
+    } else setBtnContent2("Show Breakdown");
   };
 
   return (
@@ -45,12 +60,14 @@ const Home = () => {
               <img src={Logo} alt="Qodeit-logo" />
             </LinkContainer>
             <h2>
-              Digital Skills: Digital <br />
-              Marketing
+              Get future ready with <br />
+              <b className="fst-italic">Internbuddy</b>
             </h2>
             <p>
-              Delve into different digital marketing strategies and learn how to
-              choose the right technique to target your customers.
+              Welcome to Internbuddy, your gateway to knowledge and career
+              growth! Whether you're looking to learn something new, advance
+              your career, or simply indulge your curiosity, we have the perfect
+              courses for you
             </p>
             <Button variant="dark">Join Now</Button>
           </Col>
@@ -169,95 +186,95 @@ const Home = () => {
       <div>
         <Container className="content-overview" id="content-overview">
           <h3>
-            Learn to use digital marketing strategies to grow your business
+            Ready to take the first step? <br /> <br /> Enroll today and unlock
+            the world of digital marketing!
           </h3>
-          <p>
-            Digital marketing is a crucial tool to reach your audience and grow
-            marketing is, <br /> why it is so important for an organisation, and
-            how to use it effectively. <br /> You’ll uncover different digital
-            marketing strategies and understand the importance of balancing and
-            integrating these techniques to successfully target your customers.
+          <p className="fst-italic">
+            We are excited to offer you a diverse range of courses designed to
+            enhance your skills, expand your horizons, and empower you in
+            various areas of digital marketing
           </p>
-          <h3>Explore different digital marketing techniques</h3>
-          <p>
-            With so many marketing strategies available, it can be difficult
-            knowing which one works for your business. <br />
-            This course will help you delve into each marketing strategy such as
-            banner advertising, pay per click advertising, content marketing,
-            search engine optimisation, social media, and email marketing to
-            ensure you can find the right strategy for your business.
+          <h3>Why Choose Our Courses?</h3>
+          <p className="fst-italic">
+            <b>Expert Guidance:</b> Our courses are developed and led by
+            industry professionals and subject matter experts, ensuring you
+            receive the highest quality instruction and insights from those with
+            real-world experience.
+            <br />
+            <br />
+            <b>Practical Learning: </b> We believe in a hands-on approach to
+            education. Our courses provide practical knowledge and actionable
+            skills that you can immediately apply in your professional life,
+            making your learning experience both relevant and rewarding.
+            <br />
+            <br />
+            <b>Recognized Certificates:</b> Upon successful completion of our
+            courses, you'll receive a certificate that validates your
+            achievement. These certificates can enhance your professional
+            profile and boost your career prospects.
+            <br />
+            <br />
+            <b>Accessible Online Platform:</b> Our courses are delivered through
+            an intuitive online platform, allowing you to learn from the comfort
+            of your own home or anywhere with an internet connection. Access
+            course materials and track your progress effortlessly.
           </p>
-          <h3>Learn to integrate different marketing strategies</h3>
-          <p>
-            Though marketing strategies can be powerful separately, you’ll
-            explore the importance of balancing and integrating these strategies
-            together. <br /> Through this exploration, you’ll understand how
-            integration in marketing is vital in helping to target your
-            customers more effectively.
+          <h3>Our courses </h3>
+          <p className="fst-italic">
+            Corporate business associate training program <br />
+            Meta marketing training program
+            <br />
+            <br />
+            Our Corporate business associate training program is designed to
+            equip you with the knowledge, skills, and strategies needed to
+            navigate the complexities of modern business and unlock new
+            opportunities for your organization. What sets our training program
+            apart is its practical approach. We believe that learning should be
+            experiential, and our curriculum is designed to bridge the gap
+            between theory and real-world application.
           </p>
-          <h3>Enhance your digital skills with Accenture</h3>
-          <p>
-            On the course, you’ll be guided by the specialists at Accenture.
-            With their expertise, you’ll finish with a sound understanding of
-            digital marketing and will have gained essential digital skills to
-            use in your organisation.
-          </p>
-          <YoutubeEmbed embedId="nE9Rn9tAD_I" />
+
+          {/* <YoutubeEmbed embedId="nE9Rn9tAD_I" /> */}
         </Container>
         <Container id="syllabus">
-          <h1>Syllabus</h1>
           <div className="syllabus-1">
-            <h3>How to use digital marketing</h3>
+            <h3>
+              Key topics covered in our corporate business associate training
+              program include:{" "}
+            </h3>
             <button className="syllabii-btn" onClick={handleClick}>
               {btnContent}
             </button>
-            {shown && <TimelineComp />}
+            {shown && <TimelineComp dataArray={CorporateBusiness} />}
+          </div>
+          <div className="content-overview">
+            <p className="fst-italic">
+              In today's rapidly evolving digital landscape, traditional
+              marketing techniques are no longer enough to stay ahead of the
+              competition. That's where meta-marketing comes in. Our Meta
+              Marketing Course is designed to equip you with the knowledge and
+              skills needed to excel in this dynamic and ever-changing marketing
+              environment.
+            </p>
           </div>
           <div className="syllabus-1">
-            <h3>Digital marketing techniques</h3>
+            <h3>
+              Here's what you can expect from our comprehensive Meta Marketing
+              Course:{" "}
+            </h3>
             <button className="syllabii-btn" onClick={handleClick2}>
               {btnContent2}
             </button>
-            {shown2 && <TimelineComp />}
+            {shown2 && <TimelineComp dataArray={MetaBusiness} />}
           </div>
         </Container>
-        <Container className="accreditated" id="accreditated">
-          <h1>Who is this accredited by?</h1>
-          <img
-            src="https://ugc.futurelearn.com/uploads/images/67/5c/675c873b-0981-4c4a-9184-250027fd1da2.svg"
-            alt="accreditated"
-            style={{ width: 150, height: 150 }}
-          />
-          <p>
-            The CPD Certification Service: The CPD Certification Service was
-            established in 1996 and is the leading independent CPD accreditation
-            institution operating across industry sectors to complement the CPD
-            policies of professional and academic bodies.
-          </p>
-          <h1>When would you like to start?</h1>
-          <p>
-            Start straight away and join a global classroom of learners. If the
-            course hasn’t started yet you’ll see the future date listed below.
-          </p>
-          <div className="span-join-today" id="span-join-today">
-            <div className="calender-now">
-              <FaCalendarAlt size={36} className="mx-3" />
-              <h5>Available now</h5>
-            </div>
-            <div>
-              <button>Join Today</button>
-            </div>
-          </div>
-          <h1 id="requirements">Who is the course for?</h1>
-          <p>
-            This course is designed for anyone interested in honing their
-            digital marketing skills.
-          </p>
-          <h1 id="more-courses">More courses you might like</h1>
-          <p>
-            Learners who joined this course have also enjoyed these courses.
-          </p>
-        </Container>
+        <div className="terms-conditions">
+          <LinkContainer to="/term-conditions">
+            <p className="fs-5 ">
+              Terms and Conditions <FaEnvelopeOpenText />
+            </p>
+          </LinkContainer>
+        </div>
       </div>
       <Footer />
     </>
