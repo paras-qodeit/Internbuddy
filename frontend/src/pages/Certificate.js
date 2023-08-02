@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
 import { Form, Button } from "react-bootstrap";
 import FormContainer from "../components/FormContainer";
 import { useCertificateReqMutation } from "../slices/apiSlice";
@@ -11,8 +10,6 @@ const Certificate = () => {
   const [courseName, setCourseName] = useState("");
   const [transactionId, setTransactionId] = useState("");
   const [Certificate, { isLoading }] = useCertificateReqMutation();
-
-  const dispatch = useDispatch();
 
   const submitHandler = async (e) => {
     // console.log("Certificate");
@@ -72,7 +69,7 @@ const Certificate = () => {
           ></Form.Control>
         </Form.Group>
         <Button
-          //   disabled={isLoading}
+          disabled={isLoading}
           type="submit"
           variant="primary"
           className="mt-3"
