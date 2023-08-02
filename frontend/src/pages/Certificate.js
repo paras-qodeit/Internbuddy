@@ -7,22 +7,24 @@ import { toast } from "react-toastify";
 const Certificate = () => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
-  const [courseName, setCourseName] = useState("");
+  const [coursename, setCourseName] = useState("");
   const [transactionId, setTransactionId] = useState("");
-  const [Certificate, { isLoading }] = useCertificateReqMutation();
+  const [certificateReq, { isLoading }] = useCertificateReqMutation();
 
   const submitHandler = async (e) => {
     // console.log("Certificate");
     e.preventDefault();
     try {
-      const res = await Certificate({
+      const res = await certificateReq({
         name,
         email,
-        courseName,
+        coursename,
         transactionId,
       }).unwrap();
       if (res) {
         toast.success("Successfully applied!");
+      } else {
+        toast.error("Not Authorised");
       }
     } catch (error) {
       toast.error(error?.data?.message || error?.error);
@@ -46,7 +48,7 @@ const Certificate = () => {
           <Form.Control
             type="text"
             placeholder="Enter your Course Name"
-            value={courseName}
+            value={coursename}
             onChange={(e) => setCourseName(e.target.value)}
           ></Form.Control>
         </Form.Group>

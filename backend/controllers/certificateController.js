@@ -3,6 +3,12 @@ const CertificateModel = require("../models/certificateModel");
 const certificate = async (req, res) => {
   try {
     const { name, coursename, email, transactionId } = req.body;
+    const check = CertificateModel.findOne({ email });
+    if (check) {
+      return res
+        .status(401)
+        .json({ message: "Already applied for this course" });
+    }
     const certificate = CertificateModel.create({
       name,
       email,

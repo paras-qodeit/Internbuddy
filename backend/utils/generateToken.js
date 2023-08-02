@@ -8,8 +8,10 @@ const generateToken = (res, email) => {
 
   res.cookie("jwtToken", token, {
     httpOnly: true,
-    sameSite: "strict",
-    maxAge: 3 * 24 * 60 * 60 * 1000,
+    secure: true,
+    sameSite: "none",
+    domain: "https://qodeit-internbuddy.netlify.app/",
+    // maxAge: 3 * 24 * 60 * 60 * 1000,
   });
 };
 module.exports = generateToken;

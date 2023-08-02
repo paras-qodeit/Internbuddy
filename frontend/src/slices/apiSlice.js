@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 const baseQuery = fetchBaseQuery({
-  // baseUrl: "https://localhost:3000",
+  // baseUrl: "http://localhost:5000",
   baseUrl: "https://backend-qodeit.onrender.com",
 });
 
@@ -32,10 +32,10 @@ export const apiSlice = createApi({
     }),
 
     certificateReq: builder.mutation({
-      query: (certificate) => ({
+      query: (data) => ({
         url: "/api/ask/certificate",
-        method: "post",
-        body: certificate,
+        method: "POST",
+        body: data,
       }),
     }),
   }),
