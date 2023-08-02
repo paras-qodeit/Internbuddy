@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux";
 import { useSignupMutation } from "../slices/apiSlice";
 import { setCredentials } from "../slices/authSlice";
 import { toast } from "react-toastify";
+import Cookies from "js-cookie";
 
 const Signup = () => {
   const [name, setName] = useState("");
@@ -26,6 +27,8 @@ const Signup = () => {
     } else {
       try {
         const res = await signup({ name, email, password }).unwrap();
+        Cookies.set("JwtToken", res.accessToken, { expires: 7 });
+        dispatch(setCredentials({ ...res }));
         dispatch(setCredentials({ ...res }));
         toast.success("Successfully registed!");
         navigate("/");

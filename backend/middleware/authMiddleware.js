@@ -1,14 +1,14 @@
 const jwt = require("jsonwebtoken");
-const User = require("../models/userModel"); // Import the User model path appropriately.
+const User = require("../models/userModel");
 
 const authMiddleware = async (req, res, next) => {
   let token;
-  token = req.cookies.jwtToken;
+  token = req.cookies.JwtToken;
   console.log(token);
   if (token) {
     try {
       const decoded = jwt.verify(token, process.env.JWT_SECRET);
-      console.log(decoded);
+      // console.log(decoded);
       req.user = await User.findById(decoded._id).select("-password");
       next();
     } catch (error) {

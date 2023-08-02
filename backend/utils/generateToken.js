@@ -6,12 +6,13 @@ const generateToken = (res, email) => {
     expiresIn: "1d",
   });
 
-  res.cookie("jwtToken", token, {
-    httpOnly: true,
-    secure: true,
-    sameSite: "none",
-    domain: "https://qodeit-internbuddy.netlify.app/",
-    // maxAge: 3 * 24 * 60 * 60 * 1000,
-  });
+  // res.cookie("jwtToken", token, {
+  //   httpOnly: true,
+  //   secure: true,
+  //   sameSite: "none",
+  //   // domain: "https://qodeit-internbuddy.netlify.app/",
+  //   // maxAge: 3 * 24 * 60 * 60 * 1000,
+  // });
+  return token;
 };
 module.exports = generateToken;

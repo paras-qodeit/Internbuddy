@@ -15,16 +15,18 @@ connectDB();
 app.use(
   cors({
     origin: "*",
+    allowedHeaders: "Origin,X-Requested-With,Content-Type,Accept,Authorization",
+    credentials: true,
   })
 );
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cookieParser());
-
 // Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/ask", certificateRoute);
+
+app.use(cookieParser());
 
 // Start the server
 const PORT = process.env.PORT || 5000;

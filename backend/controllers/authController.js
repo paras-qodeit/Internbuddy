@@ -50,7 +50,7 @@ const login = async (req, res) => {
     }
     const token = generateToken(res, email);
     const name = user.name;
-
+    console.log(token);
     // Return the email and access token
     res.status(200).json({ email, name, accessToken: token });
   } catch (error) {

@@ -6,6 +6,7 @@ import { Form, Button, Row, Col } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import { useLoginMutation } from "../slices/apiSlice";
 import { toast } from "react-toastify";
+import Cookies from "js-cookie";
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -20,6 +21,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const res = await Login({ email, password }).unwrap();
+      Cookies.set("JwtToken", res.accessToken, { expires: 7 });
       dispatch(setCredentials({ ...res }));
       toast.success("Successfully registed!");
       navigate("/");
