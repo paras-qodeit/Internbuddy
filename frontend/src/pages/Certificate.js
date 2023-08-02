@@ -1,16 +1,35 @@
 import React, { useState } from "react";
-
+import { useDispatch } from "react-redux";
 import { Form, Button } from "react-bootstrap";
 import FormContainer from "../components/FormContainer";
+import { useCertificateReqMutation } from "../slices/apiSlice";
+import { toast } from "react-toastify";
 
 const Certificate = () => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [courseName, setCourseName] = useState("");
   const [transactionId, setTransactionId] = useState("");
+  const [Certificate, { isLoading }] = useCertificateReqMutation();
 
-  const submitHandler = () => {
-    console.log("Certificate");
+  const dispatch = useDispatch();
+
+  const submitHandler = async (e) => {
+    // console.log("Certificate");
+    e.preventDefault();
+    try {
+      const res = await Certificate({
+        name,
+        email,
+        courseName,
+        transactionId,
+      }).unwrap();
+      if (res) {
+        toast.success("Successfully applied!");
+      }
+    } catch (error) {
+      toast.error(error?.data?.message || error?.error);
+    }
   };
   return (
     <FormContainer>

@@ -30,9 +30,21 @@ export const apiSlice = createApi({
         method: "POST",
       }),
     }),
+
+    certificateReq: builder.mutation({
+      query: (certificate) => ({
+        url: "/api/ask/certificate",
+        method: "post",
+        body: certificate,
+      }),
+    }),
   }),
 });
 
-export const { useLoginMutation, useSignupMutation, useLogoutMutation } =
-  apiSlice;
+export const {
+  useLoginMutation,
+  useSignupMutation,
+  useLogoutMutation,
+  useCertificateReqMutation,
+} = apiSlice;
 export default apiSlice;

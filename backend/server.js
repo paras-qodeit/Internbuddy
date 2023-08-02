@@ -3,6 +3,7 @@ const express = require("express");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
 const connectDB = require("./config/db");
+const certificateRoute = require("./routes/certificateRoute");
 const authRoutes = require("./routes/authRoutes");
 
 const app = express();
@@ -22,6 +23,7 @@ app.use(cookieParser());
 
 // Routes
 app.use("/api/auth", authRoutes);
+app.use("/api/ask", certificateRoute);
 
 // Start the server
 const PORT = process.env.PORT || 5000;
