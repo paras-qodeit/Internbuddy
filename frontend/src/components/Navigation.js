@@ -42,6 +42,9 @@ const Navigation = () => {
         <LinkContainer to="/certificate">
           <Navbar.Brand className="brand">Certificate</Navbar.Brand>
         </LinkContainer>
+        <LinkContainer to="/payment">
+          <Navbar.Brand className="brand">Buy Course</Navbar.Brand>
+        </LinkContainer>
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

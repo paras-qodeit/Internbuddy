@@ -1,8 +1,8 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 const baseQuery = fetchBaseQuery({
-  // baseUrl: "http://localhost:5000",
-  baseUrl: "https://backend-qodeit.onrender.com",
+  baseUrl: "http://localhost:5000",
+  // baseUrl: "https://backend-qodeit.onrender.com",
 });
 
 export const apiSlice = createApi({
@@ -38,6 +38,14 @@ export const apiSlice = createApi({
         body: data,
       }),
     }),
+
+    paymentHandle: builder.mutation({
+      query: (body) => ({
+        url: "/payment",
+        method: "POST",
+        body: body,
+      }),
+    }),
   }),
 });
 
@@ -46,5 +54,6 @@ export const {
   useSignupMutation,
   useLogoutMutation,
   useCertificateReqMutation,
+  usePaymentHandleMutation,
 } = apiSlice;
 export default apiSlice;
