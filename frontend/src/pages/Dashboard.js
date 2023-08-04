@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Row, Col, Button } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import { SlArrowDown } from "react-icons/sl";
 import { HiOutlinePlay } from "react-icons/hi";
 import { MdOutlineAssessment } from "react-icons/md";

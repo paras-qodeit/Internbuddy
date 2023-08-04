@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Form, Button, Toast } from "react-bootstrap";
+import { Form, Button } from "react-bootstrap";
 import FormContainer from "../components/FormContainer";
 import { usePaymentHandleMutation } from "../slices/apiSlice";
 import { toast } from "react-toastify";
@@ -65,7 +65,7 @@ const Payment = () => {
           ></Form.Control>
         </Form.Group>
         <Button
-          // disabled={isLoading}
+          disabled={isLoading}
           type="submit"
           variant="primary"
           className="mt-3"
