@@ -19,7 +19,6 @@ import Dashboard from "./pages/Dashboard";
 import Certificate from "./pages/Certificate";
 import Payment from "./pages/Payment";
 import DashboardPreview from "./components/DashboardPreview";
-import { useSelector } from "react-redux";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
