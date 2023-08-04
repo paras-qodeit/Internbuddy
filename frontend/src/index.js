@@ -18,6 +18,8 @@ import Signup from "./pages/Signup";
 import Dashboard from "./pages/Dashboard";
 import Certificate from "./pages/Certificate";
 import Payment from "./pages/Payment";
+import DashboardPreview from "./components/DashboardPreview";
+import { useSelector } from "react-redux";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -26,6 +28,7 @@ const router = createBrowserRouter(
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
       <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/dashboard-preview" element={<DashboardPreview />} />
       <Route path="/certificate" element={<Certificate />} />
       <Route path="/payment" element={<Payment />} />
     </Route>

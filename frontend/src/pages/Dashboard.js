@@ -61,22 +61,22 @@ const Dashboard = () => {
           </div>
           {showBreakdown && (
             <ul className="list-items">
-              <LinkContainer to="/">
+              <LinkContainer to="/dashboard-preview">
                 <li>Week 1</li>
               </LinkContainer>
-              <LinkContainer to="/">
+              <LinkContainer to="/dashboard-preview">
                 <li>Week 2</li>
               </LinkContainer>
-              <LinkContainer to="/">
+              <LinkContainer to="/dashboard-preview">
                 <li>Week 3</li>
               </LinkContainer>
-              <LinkContainer to="/">
+              <LinkContainer to="/dashboard-preview">
                 <li>Week 4</li>
               </LinkContainer>
-              <LinkContainer to="/">
+              <LinkContainer to="/dashboard-preview">
                 <li>Week 5</li>
               </LinkContainer>
-              <LinkContainer to="/">
+              <LinkContainer to="/dashboard-preview">
                 <li>Week 6</li>
               </LinkContainer>
             </ul>
