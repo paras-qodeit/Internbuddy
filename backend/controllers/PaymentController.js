@@ -19,18 +19,19 @@ const createPaymentRequest = async (req, res) => {
 
     Insta.createPayment(data, function (error, response) {
       if (error) {
-        console.log(error);
+        // console.log(error);
         res.status(400).json({ success: false });
       } else {
         // Payment redirection link at response.payment_request.longurl
         res.status(200).json({ success: true });
-        console.log(response);
+        // console.log(response);
       }
     });
 
     res.status(200).json(paymentRes);
   } catch (error) {
-    console.log(error.message);
+    // console.log(error.message);
+    res.status(400).json(error.message);
   }
 };
 

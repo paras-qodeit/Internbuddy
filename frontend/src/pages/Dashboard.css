@@ -1,8 +1,42 @@
-.dropdown {
-  width: 100%;
+.course {
+  background-color: #f5f5f5;
 }
-@media screen and (max-width: 720px) {
-  .yt-comp {
-    height: 60vh;
-  }
+.box {
+  cursor: pointer;
+}
+.box > span:hover {
+  color: #de00a5;
+}
+.course-intro {
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+}
+.course-over {
+  cursor: pointer;
+}
+.course-over:hover {
+  color: #de00a5;
+}
+.video-item {
+  display: flex;
+  margin-top: 20px;
+  margin-left: 50px;
+}
+.video-item > div {
+  margin-left: 10px;
+  cursor: pointer;
+}
+.video-item > div:hover {
+  color: #de00a5;
+}
+.list-items > li {
+  text-decoration: none;
+  list-style: none;
+  font-weight: 500;
+  margin-top: 5px;
+  cursor: pointer;
+}
+.list-items > li:hover {
+  color: #de00a5;
 }
